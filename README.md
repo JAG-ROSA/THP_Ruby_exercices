@@ -30,7 +30,8 @@ A serie of exercices coded in Ruby
 This project is part of "The Hacking Project" formation.
 These exercices were done for educational purpose only.
 
-<!-- Authors -->
+<!-- AUTHORS -->
+## Authors
 * JAG ROSA - initial work
 
 <!-- ACKNOWLEDGEMENTS -->
