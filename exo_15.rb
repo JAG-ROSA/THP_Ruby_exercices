@@ -4,21 +4,22 @@ puts "Bienvenue dans ma super pyramide! combien d'étages veux-tu?\n Donnez un n
 
 print ">"
 stage_number = gets.chomp.to_i
-#vérification que le nombre est positif
-if stage_number < 0 
-  puts "Votre nombre n'est pas dans l'intervalle indiqué! Veuillez ré-essayer!"
-  elsif stage_number > 25
-    puts "Votre nombre n'est pas dans l'intervalle indiqué! Veuillez ré-essayer!"
-else
-  puts "Voici la pyramide"
-  #Methode 1 
-  for i in 0..stage_number do
-   puts "#"*(i+=1)   
-  end
 
-  #Methode 2
-  1.upto (stage_number) do |i|
-    i.times { print "*"}
-    puts
-  end
+#vérification que le nombre est dans l'intervalle demandée
+until stage_number > 0 && stage_number <= 25 do
+  puts "Votre nombre n'est pas dans l'intervalle indiqué! Veuillez ré-essayer!"
+  stage_number = gets.chomp.to_i
+end
+
+puts "Voici la pyramide"
+
+#Methode 1 
+for i in 0..stage_number do
+  puts "#"*(i+=1)   
+ end
+
+#Methode 2
+1.upto (stage_number) do |i|
+  i.times { print "*"}
+  puts
 end

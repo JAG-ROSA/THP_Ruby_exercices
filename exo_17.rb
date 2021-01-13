@@ -4,20 +4,21 @@ puts "Bienvenue dans ma super pyramide! combien d'étages veux-tu?\n Donnez un n
 
 print ">"
 stage_number = gets.chomp.to_i
+
 #vérification que le nombre est dans l'intervalle demandée
-if stage_number < 0 
+until stage_number > 0 && stage_number <= 25 do
   puts "Votre nombre n'est pas dans l'intervalle indiqué! Veuillez ré-essayer!"
-  elsif stage_number > 25
-    puts "Votre nombre n'est pas dans l'intervalle indiqué! Veuillez ré-essayer!"
-else    
-  puts "Voici la pyramide"
-    #Methode 1 : Full triangle
-    n = 1 
-    1.upto(stage_number) do
-      print ' ' * (stage_number-n)
-      puts '*' * (2*n-1) 
-  
-      #stage_number -= 1
-      n +=1
-    end
-end
+  stage_number = gets.chomp.to_i
+end    
+
+puts "Voici la pyramide"
+
+#Methode 1 : Full triangle
+  n = 1 
+  1.upto(stage_number) do
+    print ' ' * (stage_number-n)
+    puts '*' * (2*n-1) 
+
+    #stage_number -= 1
+    n +=1
+  end
